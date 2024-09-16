@@ -21,12 +21,13 @@ services:
 
 
   keycloak:
-    image: coopersoft/keycloak:21.0.1_phone-2.2.2
+    image: coopersoft/keycloak:25.0.2_phone-2.4.1-snapshot
     #    restart: always
     ports:
       - 8080:8080
     command:
-      - start-dev --spi-phone-default-service=dummy
+      - start-dev
+      - --spi-phone-default-service=dummy
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
